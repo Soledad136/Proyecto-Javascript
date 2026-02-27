@@ -1,0 +1,12 @@
+// mixin flex
+@mixin flex{
+     display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin medidas($width, $height)
+{
+  width: $width;
+  height: $height;
+}
