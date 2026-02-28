@@ -116,15 +116,15 @@ let elH1 = document.getElementById('h1');
 console.log (elH1);
 
 
+let inicio = document.getElementsByClassName("#");
 
+console.log(inicio);
 
+let ul = document.getElementsByTagName("ul");
 
+console.log(ul);
 
+let nav = document.getElementsByTagName("nav");
 
-
-
-
-
-
-
+console.log(nav);
 
