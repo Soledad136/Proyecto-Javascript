@@ -202,6 +202,7 @@ const cargarDOM = () => {
   div.addEventListener("click", () => {
       console.log("click");
     });
+    
 
 
 
