@@ -108,6 +108,17 @@ main {
       cursor: pointer;
       align-items: flex-start;
 
+      .border {
+  border: 1px solid black;
+}
+
+#evento {
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+}
+
+
       .estilofooter {
         display: flex;
         float: left;

@@ -7,6 +7,8 @@ let opciones = [
   { id: 3, nombre: "Curso sobre interpretación de cartas natales", precio: 70000 },
 ];
 
+
+
 const agregarAlCarrito = (i) => {
   carrito.push(opciones[parseInt(i) - 1]);
 };
@@ -127,4 +129,82 @@ console.log(ul);
 let nav = document.getElementsByTagName("nav");
 
 console.log(nav);
+
+
+
+/*const clases = ['Lectura Carta natal','Curso de astrología humanística','Curso sobre interpretación de cartas natales'
+]
+
+
+const cargarDOM = ()=>{
+  let h1 = document.getElementById('titulo')
+  let ul = document.getElementById('listado')
+
+    
+h1.innerText = "www.astrología.com";
+
+clases.forEach((clases) => {
+    let li = document.createElement("li");
+        li.innerText = `clases: ${clases}`;
+    ul.appendChild(li);
+  });
+  };
+
+  cargarDOM();
+*/
+
+  
+const clases1 = [
+  { id: 1, nombre: "Lectura Carta natal", precio: 45000 },
+  { id: 2, nombre: "Curso de astrología humanística", precio: 45000 },
+  { id: 3, nombre: "Curso sobre interpretación de cartas natales", precio: 70000 },
+];
+const cargarDOM = () => {
+  let contenedor = document.getElementById("contenedor");
+
+  clases1.forEach((clases1) => {
+    let div = document.createElement("div");
+    div.className = "border";
+      div.innerHTML = `
+          <h3>Id: ${clases1.id}</h3>
+          <h2>Nombre: ${clases1.nombre}</h2>
+          <span>Precio: $${clases1.precio}</span>
+      `;
+      contenedor.appendChild(div);
+    });
+  };
+
+  cargarDOM();
+
+  let div = document.querySelector("#hijo1");
+    
+  
+    div.addEventListener("mousedown", () => {
+    console.log("mousedown");
+  });
+
+  div.addEventListener("mouseup", () => {
+    console.log("mouseup");
+  });
+
+  div.addEventListener("mouseover", () => {
+    console.log("mouseover");
+  });
+
+  div.addEventListener("mouseout", () => {
+    console.log("mouseout");
+    });
+
+  div.addEventListener("mousemove", () => {
+    console.log("mousemove");
+  });
+
+  div.addEventListener("click", () => {
+      console.log("click");
+    });
+
+
+
+
+
 
