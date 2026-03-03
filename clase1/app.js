@@ -177,32 +177,30 @@ const cargarDOM = () => {
   cargarDOM();
 
   let div = document.querySelector("#hijo1");
+
+    //fetch
+
     
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+        .then((res) => res.json())
+      .then((data) => console.log(data))
+
+      //async-await
+        const llamadaServerExterno = async () => {
+        let resultado = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+let data = await resultado.json();
+    console.log(data);
+  };
+  llamadaServerExterno()
   
-    div.addEventListener("mousedown", () => {
-    console.log("mousedown");
-  });
+  const llamadaArchivoInterno = async () => {
+  let resultado = await fetch("prods.json");
+  let data = await resultado.json();
+  console.log(data);
+};
 
-  div.addEventListener("mouseup", () => {
-    console.log("mouseup");
-  });
+llamadaArchivoInterno();
 
-  div.addEventListener("mouseover", () => {
-    console.log("mouseover");
-  });
-
-  div.addEventListener("mouseout", () => {
-    console.log("mouseout");
-    });
-
-  div.addEventListener("mousemove", () => {
-    console.log("mousemove");
-  });
-
-  div.addEventListener("click", () => {
-      console.log("click");
-    });
-    
 
 
 
