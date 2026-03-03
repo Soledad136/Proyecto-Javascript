@@ -8,10 +8,10 @@ let opciones = [
 ];
 
 
-
 const agregarAlCarrito = (i) => {
   carrito.push(opciones[parseInt(i) - 1]);
 };
+
 
 let opcion;
 do {
@@ -42,6 +42,7 @@ do {
       break;
   }
 } while (opcion != 5);
+
 
 
 
@@ -115,7 +116,7 @@ console.log (curso);
 console.log (JSON.stringify(curso));
 
 let elH1 = document.getElementById('h1');
-console.log (elH1);
+console.log (elH1)
 
 
 let inicio = document.getElementsByClassName("#");
