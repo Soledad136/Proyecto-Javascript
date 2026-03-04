@@ -203,8 +203,20 @@ let data = await resultado.json();
 llamadaArchivoInterno();
 
 
-
-
+  Swal.fire({
+    title: "¿Desea agregar al carrito?",
+       showDenyButton: true,
+       showCancelButton: true,
+       confirmButtonText: "Guardar",
+       denyButtonText: `No agregado`
+     }).then((result) => {
+       console.log(result);
+       if (result.isConfirmed) {
+         Swal.fire("¡Agregado!", "", "Satisfactoriamente");
+       } else if (result.isDenied) {
+         Swal.fire("No se ha podido agregar al carrito", "", "Información");
+       }
+     });
 
 
 
